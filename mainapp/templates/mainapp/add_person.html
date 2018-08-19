@@ -49,7 +49,7 @@
 {% block javascript %}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/js/bootstrap-datepicker.min.js"></script>
 <script>
-  $(function() {
+  window.addEventListener('load', function() {
     $('#id_gender_0').parents('.radio').hide();
     $('#id_gender > .radio').removeClass('radio').addClass('radio-inline');
     $('#id_camped_at').attr('readonly', true);
