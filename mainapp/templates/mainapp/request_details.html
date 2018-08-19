@@ -2,6 +2,14 @@
 {% load bootstrap3 %}
 
 {% block content %}
+<<<<<<< HEAD
+=======
+
+<form action="{%url 'requestlistview' %}" method="get" class="text-center">
+       {% bootstrap_form filter.form bound_css_class=False %}
+       <input value="View requests" class="btn btn-primary" type="submit" />
+ </form>
+>>>>>>> Added Selectize to <select>s
  <div class="table-responsive">
   <table class="table">
     <thead>
