@@ -94,8 +94,9 @@
 		console.log("Your browser does not allow some javascript programs.\nError Message : " + err.message)
 	}
 
-	window.onload = function(){
-        $("#id_requestee_phone").attr('type', 'text');
+	window.addEventListener('load', function(){
+		$('#id_district').selectize();
+        $("#id_requestee_phone").attr('type', 'number');
 		var gpsField = document.getElementById('id_latlng');
 		var gpsAccuracyField = document.getElementById('id_latlng_accuracy');
 		gpsField.readOnly = true;
@@ -128,6 +129,7 @@
 		$('#instructionModal').on('hidden.bs.modal', function (e) {
 		  navigator.geolocation.getCurrentPosition(success, error, options);
 		})
+<<<<<<< HEAD
     try {
       navigator.permissions.query({'name': 'geolocation'}).then(
         function(result) {
@@ -141,6 +143,11 @@
       $('#instructionModal').modal('show');
     }
 	}
+=======
+
+		$('#instructionModal').modal('show');
+	});
+>>>>>>> Added Selectize to <select>s
 
 	function showLocationPickerForm(){
 		$('#placepicker-form').show();
