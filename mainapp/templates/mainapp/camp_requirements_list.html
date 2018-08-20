@@ -125,9 +125,7 @@
       links = content.replace(/[0-9 ]{10,15}/g, "<a href=\"tel:$&\">$&</a>");
       $(this).html(links);
     })
-    $(function() {
-      $('#id_district').selectize();
-    });
+    $('#id_district').selectize();
   });
 </script> 
 {% endblock %}
