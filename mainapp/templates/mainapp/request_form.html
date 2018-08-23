@@ -129,25 +129,19 @@
 		$('#instructionModal').on('hidden.bs.modal', function (e) {
 		  navigator.geolocation.getCurrentPosition(success, error, options);
 		})
-<<<<<<< HEAD
-    try {
-      navigator.permissions.query({'name': 'geolocation'}).then(
-        function(result) {
-          switch (result.state) {
-            case 'prompt': $('#instructionModal').modal('show'); break;
-            case 'granted': navigator.geolocation.getCurrentPosition(success, error, options); break;
-          }
-      })
-    } catch (err) {
-      // capture cases that don't have navigator or navigator.permissions
-      $('#instructionModal').modal('show');
-    }
-	}
-=======
-
-		$('#instructionModal').modal('show');
+    	try {
+	      navigator.permissions.query({'name': 'geolocation'}).then(
+	        function(result) {
+	          switch (result.state) {
+	            case 'prompt': $('#instructionModal').modal('show'); break;
+	            case 'granted': navigator.geolocation.getCurrentPosition(success, error, options); break;
+	          }
+	      })
+	    } catch (err) {
+	      // capture cases that don't have navigator or navigator.permissions
+	      $('#instructionModal').modal('show');
+	    }
 	});
->>>>>>> Added Selectize to <select>s
 
 	function showLocationPickerForm(){
 		$('#placepicker-form').show();
